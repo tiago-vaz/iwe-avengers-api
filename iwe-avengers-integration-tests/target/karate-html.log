@@ -1,29 +1,146 @@
-12:55:18.414 karate.env system property was: null 
-12:55:19.049 request:
-1 > GET https://www.marvel.com/avengers
+22:17:40.349 karate.env system property was: null 
+22:17:40.628 request:
+1 > GET https://96o54hj8z9.execute-api.us-east-1.amazonaws.com/dev/avengers/not-found-id
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Host: www.marvel.com
+1 > Host: 96o54hj8z9.execute-api.us-east-1.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-12:55:19.985 response time in milliseconds: 932
-1 < 200
-1 < Age: 3669
+22:17:41.423 response time in milliseconds: 794
+1 < 404
 1 < Connection: keep-alive
-1 < Content-Length: 13750
-1 < Content-Type: text/html; charset=UTF-8
-1 < Date: Sun, 05 Aug 2018 15:55:24 GMT
-1 < Expires: Sun, 05 Aug 2018 16:54:15 GMT
-1 < P3P: CP="ALL DSP COR NID CURa TAIa OTPi OUR BUS UNI INT PRE"
-1 < Server: Apache
-1 < Strict-Transport-Security: max-age=31536000; includeSubDomains
-1 < X-ServerNickName: terrigen-jewel-prod02
-1 < X-UA-Compatible: IE=Edge
-                            <!DOCTYPE html>
-                            <html>
-                              <head>
-                            
-                                <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+1 < Content-Length: 308
+1 < Content-Type: application/json
+1 < Date: Tue, 27 Nov 2018 00:16:44 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bfc8cec-78fdd1da19e5a4f8a7c15d26;Sampled=0
+1 < x-amz-apigw-id: Q_r0_FIToAMFSEw=
+1 < x-amzn-RequestId: b8f34d53-f1d9-11e8-b97a-e7d52c64d045
+{"errorMessage":"[NotFound] - Avenger id: not-found-id","errorType":"com.iwe.avengers.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:35)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
+
+avengers/aaaa-bbbb-cccc-dddd
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 96o54hj8z9.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+21:59:54.121 response time in milliseconds: 1730
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Length: 76
+1 < Content-Type: application/json
+1 < Date: Mon, 26 Nov 2018 23:58:57 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bfc88c0-a3cf6be03e5062925d3ff9ce;Sampled=0
+1 < x-amz-apigw-id: Q_pOCF_xoAMFTFw=
+1 < x-amzn-RequestId: 3c10d9b5-f1d7-11e8-9e3c-6dae327b9e6d
+{"id":"aaaa-bbbb-cccc-dddd","name":"Iron Man","secretIdentity":"Tony Stark"}
+
+21:59:54.156 karate.env system property was: null 
+21:59:54.156 request:
+1 > POST https://96o54hj8z9.execute-api.us-east-1.amazonaws.com/dev/avengers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 49
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 96o54hj8z9.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"name":"Iron Man","secretIdentity":"Tony Stark"}
+
+21:59:56.928 response time in milliseconds: 2772
+1 < 201
+1 < Connection: keep-alive
+1 < Content-Length: 63
+1 < Content-Type: application/json
+1 < Date: Mon, 26 Nov 2018 23:59:00 GMT
+1 < X-Amzn-Trace-Id: Root=1-5bfc88c2-81d1864e014e61a493618dca;Sampled=0
+1 < x-amz-apigw-id: Q_pOUFLeoAMFjZg=
+1 < x-amzn-RequestId: 3d233412-f1d7-11e8-a505-39d01717aee6
+{"id":"89abcd","name":"Iron Man","secretIdentity":"Tony Stark"}
+
+21:59:56.941 karate.env system property was: null 
+21:59:56.944 request:
+1 > POST https://96o54hj8z9.execute-api.us-east-1.amazonaws.com/dev/avengers
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 31
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 96o54hj8z9.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Tony Stark"}
+
+21:59:57.387 response time in milliseconds: 443
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Mon, 26 Nov 2018 23:59:00 GMT
+1 < x-amz-apigw-id: Q_pOwHAuoAMFZvw=
+1 < x-amzn-RequestId: 3ec5e840-f1d7-11e8-9282-4385f0dd5b7f
+{"message": "Invalid request body"}
+
+21:59:57.403 karate.env system property was: null 
+21:59:57.403 request:
+1 > PUT https://96o54hj8z9.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 49
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 96o54hj8z9.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"name":"Iron Man","secretIdentity":"Tony Stark"}
+
+21:59:57.840 response time in milliseconds: 437
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Length: 92
+1 < Content-Type: application/json
+1 < Date: Mon, 26 Nov 2018 23:59:01 GMT
+1 < x-amz-apigw-id: Q_pO0Gw3oAMFuKQ=
+1 < x-amzn-RequestId: 3f0c667e-f1d7-11e8-8c94-fbd28f0e1942
+{
+  "id" : "aaaa-bbbb-cccc-dddd",
+  "name" : "Iron Man",
+  "secretIdentity" : "Tony Stark"
+}
+
+21:59:57.856 karate.env system property was: null 
+21:59:57.856 request:
+1 > PUT https://96o54hj8z9.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 31
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 96o54hj8z9.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Tony Stark"}
+
+21:59:58.356 response time in milliseconds: 500
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Mon, 26 Nov 2018 23:59:01 GMT
+1 < x-amz-apigw-id: Q_pO5Gi3IAMFrxw=
+1 < x-amzn-RequestId: 3f564094-f1d7-11e8-94b9-a97b4cb21c65
+{"message": "Invalid request body"}
+
+21:59:58.362 karate.env system property was: null 
+21:59:58.362 request:
+1 > DELETE https://96o54hj8z9.execute-api.us-east-1.amazonaws.com/dev/avengers/aaaa-bbbb-cccc-dddd
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 96o54hj8z9.execute-api.us-east-1.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+21:59:58.877 response time in milliseconds: 515
+1 < 204
+1 < Connection: keep-alive
+1 < Content-Length: 0
+1 < Content-Type: application/json
+1 < Date: Mon, 26 Nov 2018 23:59:02 GMT
+1 < x-amz-apigw-id: Q_pO-FhFIAMFoKw=
+1 < x-amzn-RequestId: 3fa65d48-f1d7-11e8-81e1-75d66e7ae807
+
+]},{},["loader"]);</script>
                                 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
                             
                                 <title>Avengers: Infinity War | Trailer & Official Movie Site | Now Playing</title>
