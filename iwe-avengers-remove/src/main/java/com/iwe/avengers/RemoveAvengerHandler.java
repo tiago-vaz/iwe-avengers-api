@@ -26,11 +26,11 @@ public class RemoveAvengerHandler implements RequestHandler<Avenger, HandlerResp
 			context.getLogger().log("Avenger found! " 
 					+ avengerRetrieved.get().getName());
 			
-			dao.delete(avengerRetrieved.get().getId());
+			dao.delete(avenger);
 			
-			if (isAvengerDeleted == true) {
-				context.getLogger().log("Avenger " + avengerRetrieved.get().getName() + " deleted! May they rest in peace...");
-			}
+//			if (isAvengerDeleted == true) {
+//				context.getLogger().log("Avenger " + avengerRetrieved.get().getName() + " deleted! May they rest in peace...");
+//			}
 		
 		return HandlerResponse
 				.builder()				
