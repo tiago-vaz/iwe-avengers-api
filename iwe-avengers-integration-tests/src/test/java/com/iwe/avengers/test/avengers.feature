@@ -102,3 +102,9 @@ Scenario: Must return 404 for attempt to delete Avenger not existing
 Given path 'avengers','aaaa'
 When method delete
 Then status 404
+
+Scenario: Should return invalid access
+
+Given path 'avengers', 'any-id'
+When method get
+Then status 401
